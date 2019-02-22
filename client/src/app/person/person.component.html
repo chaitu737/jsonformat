@@ -1,4 +1,5 @@
 <p>Select a Person</p>
-<select>
-<option *ngFor="let character of h">{{character}}</option>
+<select [(ngModel)]="selectPerson" (change)="personChange($event)">
+    <option *ngFor="let name of names" [value]="name.id">{{name.name}}</option>
 </select>
+{{currentData | json}}

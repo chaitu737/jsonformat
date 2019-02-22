@@ -7,6 +7,7 @@ import { AppService } from './app.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PersonComponent } from './person/person.component';
 import { AttendenceService } from './services/attendence.service';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { AttendenceService } from './services/attendence.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [AppService, AttendenceService],
   bootstrap: [AppComponent]
